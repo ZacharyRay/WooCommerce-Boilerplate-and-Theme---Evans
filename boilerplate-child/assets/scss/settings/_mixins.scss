@@ -1,0 +1,13 @@
+// Settings for mixins
+
+@mixin global_width {
+    width: calc(100% - 30px);
+    max-width: 1400px;
+    margin: auto;
+}
+
+@mixin remove_button_style {
+    background: transparent;
+    border:none;
+    border-radius: 0px;
+}

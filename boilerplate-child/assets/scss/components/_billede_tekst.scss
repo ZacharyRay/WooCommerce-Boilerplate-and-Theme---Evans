@@ -1,0 +1,48 @@
+.billede_tekst{
+    .container{
+      
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "text";
+        
+        @include md {
+            &.img_text{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "image text";
+            }
+            &.text_img{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-areas: "text image";
+            }
+        }
+
+        .image_col{
+            grid-area: image;
+            
+            display: grid;
+            justify-content: stretch;
+
+            img{                
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .text_col{
+            grid-area: text;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include md {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+        }
+    }
+}

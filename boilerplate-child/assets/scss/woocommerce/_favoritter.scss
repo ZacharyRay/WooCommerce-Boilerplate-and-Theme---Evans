@@ -1,0 +1,33 @@
+button.favoritter{
+    @include remove_button_style;
+    
+    font-size: 1.6rem;
+    font-family: $global-font;
+    cursor: pointer;
+
+    border: 1px solid $grey_light;
+    padding: 10px 20px;
+    flex: 1 0 100%;
+    text-align: center;
+    justify-content: center;
+
+    @include lg {
+        flex: 1 0 20%;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+ 
+    &[data-type='remove_me']{
+        flex: none;
+        color:$red;
+        margin-left: 0px;
+        text-transform: uppercase;
+        display: block;
+        border:none;
+        padding:10px 0px;
+
+        &:hover{
+            color: darken($red, 15%);
+        }
+    }
+}

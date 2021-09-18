@@ -1,0 +1,58 @@
+.badge_w{
+    position: absolute;
+    left:0px;
+    right: 0px;
+    top:0px;
+    z-index: 100;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    
+
+    .badge{
+        position: relative;
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        aspect-ratio: 1 / 1;
+        height: 60px;
+        width: 60px;
+        
+        
+        border-radius: 50%;
+        background-color: rgba($black, 0.85 );
+        color:$white;
+        font-size: 1.2rem;
+       
+       
+
+        >span{
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            padding: 10px;
+
+            .up_to{
+                display: block;
+                margin-bottom: -8px;
+            }
+        }
+        
+        &.news_badge{
+            background: rgba($grey, 0.85);
+        }
+    }
+}
+
+body.single-product{
+    .badge{
+        font-size: 1.6rem;
+        height: 70px;
+        width: 70px;
+    }
+}
+
+.woocommerce-notices-wrapper{
+    grid-column:  1 / -1;
+}

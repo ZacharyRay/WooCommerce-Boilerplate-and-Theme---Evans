@@ -1,0 +1,160 @@
+.header_usp{
+    background-color: $grey_light;
+
+    .container{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'usp';
+        grid-gap: 0px;
+
+        @include lg {
+            grid-template-columns: 1fr auto;
+            grid-template-areas: 'usp kundecenter';
+            grid-gap: 0px 15px;
+        }
+        
+        .slick-slider{
+            margin-bottom: 0px;
+
+            .slick-arrow{
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                color:$grey; 
+
+                &.slick-prev{
+                    left: -15px;
+                    right: unset;
+                }
+                &.slick-next {
+                    right: -15px;
+                }
+            }
+
+            .slick-track{
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .header_usp_slider{
+          
+            grid-area: usp;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            overflow: hidden;
+
+            &:not(.slick-slider){
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px 30px;
+
+                @media (max-width: 676px) {
+                    .usp__item:not(:first-of-type){
+                        display: none;
+                    }
+                }
+                @media (min-width: 678px) and (max-width: 1023px) {
+                    .usp__item:nth-child(n+3){
+                        display: none;
+                    }
+                }
+
+            }
+        }
+        .usp__item{
+            display: flex;
+            gap: 10px;
+            align-content: center;
+            align-items: center;            
+            text-align: center; 
+            justify-content: center;    
+            padding-left: 15px;
+            padding-right: 15px; 
+             
+            
+            @include lg {
+                padding-left: 0px;
+                padding-right: 20px;  
+                text-align: left;
+                justify-content: left;
+                max-width: 350px;
+            }
+
+            .usp__icon{
+                display: none;
+                font-size: 1.3rem;
+                color:$green;
+
+                @include md {
+                    display: block;
+                }
+            }
+            .usp__title{
+                font-size: 1.3rem;
+                color:$black;
+
+                p{
+                    margin:0px;
+                }
+            }  
+        }
+
+        .header_link{
+            grid-area: kundecenter;
+            display: none;
+            @include lg {
+                display:block;
+            }
+
+            a.btn{
+                display: flex;
+                padding: 10px;
+                align-items: center;
+                background: $grey_d9;
+                font-size: 1.3rem;
+
+                &:hover{
+                    background: lighten($grey_d9, 10%);
+                }
+            }
+        }
+    }
+
+}
+
+//USP på produkt siden
+#product_usp{
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+    grid-gap: 15px;
+    margin-top:40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey_light; 
+    text-align: center;
+
+    @include lg {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .usp__item{
+       
+
+        .usp__icon{
+            font-size: 3rem;
+            color:$green;
+        }
+        .usp__title{
+            font-size: 1.3rem;
+        }
+    }
+}
+
+body.safari{
+    .header_usp .container .usp__item .usp__icon{
+        padding-right: 10px;
+    }
+}

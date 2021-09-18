@@ -1,0 +1,101 @@
+.newsletter{
+    background: $grey_light;
+    padding-top:30px;
+    padding-bottom: 30px;
+
+    .container{
+        
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "text"
+        "form";
+        align-items: center;
+
+        @include md {
+            grid-template-columns: 4fr 7fr;
+            grid-template-areas: 
+            "text form";
+        }
+
+        .newsletter__text{
+            grid-area: text;
+            p{
+                font-size: 1.4rem;
+            }
+        }
+        .newsletter__form{
+            grid-area: form;
+            @include md {
+                margin-top:35px;
+            }
+        }
+    }
+
+}
+.footer {
+    background: $grey_light;
+    border-top: 1px solid $grey_medium;
+    padding-top:60px;
+    padding-bottom: 60px;
+
+    .container{
+
+        display: grid;
+        grid-gap: 30px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "footer_1"
+        "footer_2"
+        "footer_3"
+        "footer_4";
+        text-align: center;
+
+        @include md {
+            grid-template-columns: 3fr 5fr 2fr 2fr;
+            grid-template-areas: 
+            "footer_1 footer_2 footer_3 footer_4";
+            text-align: left;
+        }
+        .footer__1{
+            grid-area: footer_1;
+        }
+        .footer__2{
+            grid-area: footer_2;
+        }
+        .footer__3{
+            grid-area: footer_3;
+        } 
+        .footer__4{
+            grid-area: footer_4;
+        } 
+
+        #footer_logo{
+            display: inline-block;
+            margin-bottom: 20px;
+            margin-top: 2.4rem;
+        }
+
+        .firma_telefon{
+            font-size: 2.2rem;
+        }
+
+        .firma_abningstider{
+            color:$grey;
+        }
+
+        .firma_cvr{
+            color:$black;
+        }
+
+        .menu{
+            a{
+                color:$grey;
+                &:hover{
+                    color: lighten($grey, 15%)
+                }
+            }
+        }
+    }
+}

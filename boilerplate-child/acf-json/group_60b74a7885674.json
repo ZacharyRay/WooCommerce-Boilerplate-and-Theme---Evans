@@ -1,0 +1,64 @@
+{
+    "key": "group_60b74a7885674",
+    "title": "Nyheder",
+    "fields": [
+        {
+            "key": "field_60b74a7dd7413",
+            "label": "Vis produkter der er oprettet indenfor de sidste",
+            "name": "nyheder_dage",
+            "type": "number",
+            "instructions": "Angiv hvor mange dage et produkt skal angives som en nyhed. Produkterne får tilføjet et banner samt bliver vist på siden nyheder.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 30,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_60b74a9dd7414",
+            "label": "Ingen nyheder",
+            "name": "ingen_nyheder",
+            "type": "wysiwyg",
+            "instructions": "Den tekst der skal vises, hvis der ikke er nogle nyheder.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "globale-indstillinger"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625579231
+}

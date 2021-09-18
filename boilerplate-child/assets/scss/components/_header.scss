@@ -1,0 +1,193 @@
+.header{
+  position: sticky;
+  z-index: 1000;
+  top:0;
+  background: #fff;
+  //box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  
+  .container{  
+    
+
+    &#main{
+      position: static; 
+      padding-top:20px;
+      padding-bottom:20px;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: auto 1fr 2fr;
+      grid-template-areas:
+          "menu logo icons"
+          "search search search ";
+      align-items: center;
+      transition: all .3s ease;
+
+      @include lg {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logo search icons"
+        "menu menu menu ";
+        padding-bottom:0px;
+      } 
+
+    }
+    .header__logo{
+      grid-area: logo;
+      text-align: left;
+    }
+
+    .header__search{
+      grid-area: search;
+    }
+
+    
+    .header__icons{
+      grid-area: icons;
+      gap:15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      
+    }
+
+    .header__menu{
+      grid-area: menu;
+      @include lg {
+        //border-top: 1px solid $grey_light;
+        //border-bottom: 1px solid $grey_light;
+        &::before{
+          content: "";
+          position: absolute;
+          border-top:1px solid $grey_light;
+          left: 0px;
+          right: 0px;
+        }
+        // &::after{
+        //   content: "";
+        //   position: absolute;
+        //   border-top:1px solid $grey_light;
+        //   left: 0px;
+        //   right: 0px;
+        // }
+        
+      }
+    }
+
+
+  }
+}
+
+.header{
+  a svg, button svg{    
+    font-size: 2.0rem;
+  }
+  button, a{
+    @include remove_button_style;
+    //font-size: 2rem;
+    color:$black;
+    cursor: pointer;
+    //flex-grow: 1;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    
+    @include lg { 
+      flex-grow:unset;
+    }
+
+    &:hover{
+      color: $grey;
+    }
+
+    &#h_icon_menu{
+      @include lg { 
+        display: none;
+      }
+    }
+    &#h_icon_search{}
+    &#h_icon_user{}
+    &#h_icon_whislist{}
+    &#h_icon_cart{}
+
+    .menu_count, #cart_count{
+      position: relative;
+      top: -8px;    
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+  }
+}
+
+body.safari{
+  #h_icon_user, #h_icon_whislist{
+    padding-left:7px;
+    padding-right:7px;
+  }
+  #h_icon_cart{
+    padding-left: 7px;
+  }
+}
+
+.breadcrumbs{
+  margin-bottom: 20px;
+  .container{
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-bottom: 1px solid $grey_c1;
+    text-transform: uppercase;
+    a{
+      font-size: 1.1rem;
+    }
+    span{
+      color:$grey;
+      font-size: 1.1rem;
+    }
+
+  }
+}
+
+.search_field{
+  background-color: $white;
+  border: 1px solid $grey_d9;
+  border-radius: 24px;
+  transition: all .3s ease;
+
+  form#searchform{
+    width: 100%;
+    grid-area: form;
+    position: relative;
+
+    input#h_search{
+      margin-bottom: 0px;
+      padding-left: 20px;
+      padding-right: 45px;
+      width: 100%;
+      background: transparent;
+      border: none;
+
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-decoration {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      
+    }
+    .search-submit{
+      display: none;
+    }
+    svg{
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color:$black;
+      cursor: pointer;
+
+      &:hover{
+        color: lighten($black, 10%);
+      }
+    }
+  }
+}

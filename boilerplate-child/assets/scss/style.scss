@@ -1,0 +1,46 @@
+// Import scss files
+
+// settings always on top
+@import "./settings/mixins";
+@import "./settings/fonts";
+@import "./settings/colors";
+@import "./settings/media-queries";
+@import "./settings/variables";
+@import "./settings/reset.scss";
+
+
+// components
+@import "./components/header";  
+@import "./components/menu";  
+@import "./components/footer";
+//@import "./components/burger";
+@import "./components/loop_posts";
+@import "./components/error_page";
+@import "./components/archive_page";
+@import "./components/produkt_filter";
+@import "./components/popup";
+
+
+//ACF sections
+@import "./components/varekategorier";
+@import "./components/usp";
+@import "./components/billede_tekst";
+@import "./components/brands";
+@import "./components/fuld_bredde_tekst";
+@import "./components/banner";
+@import "./components/tekst_tekst";
+@import "./components/udvalgte_varer";
+@import "./components/shop_notice";
+
+//woocoommerce
+@import "./woocommerce/product";
+@import "./woocommerce/badges";
+@import "./woocommerce/pagination";
+@import "./woocommerce/loops";
+@import "./woocommerce/archive";
+@import "./woocommerce/cart";
+@import "./woocommerce/checkout";
+@import "./woocommerce/thanks";
+@import "./woocommerce/account";
+@import "./woocommerce/plugins";
+@import "./woocommerce/favoritter";

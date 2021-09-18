@@ -1,0 +1,113 @@
+/*Products loops*/
+ul.products {
+
+    &:not(.slick-slider){
+        display:grid;
+        grid-template-columns: 1fr;
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include lg {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        grid-gap: 30px;
+    }
+
+    list-style-type:none;
+    padding-inline-start: 0px;
+
+
+    li.product{
+        position:relative;
+        display: flex;
+        align-content: flex-start;
+        flex-direction: column;
+        //flex-wrap: wrap;
+        //align-items: stretch;
+        
+
+        a{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            &.woocommerce-loop-product__link{
+                height: calc(100% - 54px); //minus højden af tilføj til kurv knappen
+            }
+            
+        }
+        
+        .woocommerce-loop-product__title{
+            font-size: 1.4rem;
+            color:$grey;
+            margin-bottom: 5px;
+            font-weight: 400;
+            text-transform: none;
+            width: 100%;
+        }
+
+        .price{
+            font-weight: 600;
+            font-size: 1.6rem;
+            color:$black;
+            width: 100%;
+            margin-top: auto;
+            
+            del{
+                color:grey;
+                font-size: 1.2rem!important;
+                .woocommerce-Price-currencySymbol{
+                    display: none;
+                }
+            }
+            ins{
+                text-decoration: none;
+            }
+        }
+
+        a.button.add_to_cart_button, 
+        a.button.product_type_simple,
+        a.button.product_type_external,
+        a.button.product_type_grouped
+        {
+            background: $green;
+            border: $green;
+            margin-top:15px;
+            // align-self: flex-end;
+            // justify-content: center;
+            // width: 100%;
+            
+            &:hover{
+                background:  lighten($green, 15%); 
+                border: lighten($green, 15%); 
+            }
+        }
+    
+
+        &.product-type-simple{}
+        &.product-type-variable{}
+        &.product-type-external{}
+        &.product-type-grouped{}
+    }
+    
+}
+
+.added_to_cart {
+    margin-top: 10px;
+    display: block!important;
+    position: absolute;
+    top: 100%;;
+    &::before{
+        content: '\f00c';
+        font-family: 'Font Awesome 5 Pro';
+        display: none
+    }
+}
+
+.no-products{
+    grid-column: 1 / -1;
+    background: $grey_light;
+    padding: 15px;
+    color: $grey;
+    font-size: 1.6rem;
+}

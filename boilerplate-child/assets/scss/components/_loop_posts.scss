@@ -1,0 +1,24 @@
+.post_list{
+    .container{
+        // display: grid;
+        // grid-template-columns: repeat(5, 1fr);
+        
+        .loop{
+            .thumbnail{
+                
+            }
+            .titel{
+                font-size: 1.4rem;
+                color: $grey;
+                margin-bottom: 5px;
+                font-weight: 400;
+                text-transform: none;
+            }
+        }
+
+        li.product {
+            list-style-type: none;
+            
+        }
+    }
+}

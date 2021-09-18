@@ -1,0 +1,105 @@
+.woocommerce-order-received, .woocommerce-checkout{
+
+    .woocommerce-order-overview {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include md {
+            grid-template-columns: repeat(5, auto);
+        }
+    }
+    .woocommerce-order-overview, .order_details{
+        list-style: none;
+      
+        padding-inline-start: 0px;
+        margin-bottom: 30px;   
+
+        li{
+            border-bottom: 1px solid $grey_light;
+            margin-right: 10px;
+            padding: 10px 0px;
+            color:$grey;
+
+            strong{
+                display: block;
+                color:$black;
+            }
+        }
+
+    }
+
+    .woocommerce-order-details, .woocommerce-customer-details{
+        margin-bottom: 30px;
+        margin-top: 60px;
+    }
+
+    .woocommerce-table--order-details{
+        tbody tr.order_item:last-of-type {
+            border-bottom: 2px solid #e8e8e8;
+        }
+       
+        tfoot{
+            tr:last-of-type{
+                th{
+                    font-weight: 600;
+                    color:$black;
+                    font-size: 1.8rem;
+                }
+                td{
+                    font-weight: 600;
+                    color:$black;
+                    font-size: 1.8rem;
+
+                    .includes_tax{
+                        display: block;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.woocommerce-columns--2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "column1"
+    "column2";
+    @include md {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "column1 column2";
+    }
+    .woocommerce-column--1{
+        grid-area: column1;
+    }
+    .woocommerce-column--2{
+        grid-area: column2;
+    }
+}
+
+.wc-item-meta{
+    list-style: none;
+    padding-left: 0px;
+   
+    @include md {
+        padding-inline-start: 20px;
+    }
+
+    li{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 10px;
+        @include md {
+            grid-template-columns: 1fr 5fr;
+            grid-gap: 15px;
+            margin-bottom: 0px;
+        }
+
+        p{
+            margin: 0px;
+        }
+    }
+    
+}

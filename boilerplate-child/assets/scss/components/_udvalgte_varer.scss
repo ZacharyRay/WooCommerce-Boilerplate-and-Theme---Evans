@@ -1,0 +1,20 @@
+.udvalgte_varer{
+    overflow: hidden;
+
+    .slick-track{
+        display: flex !important;
+    }
+
+    .slick-slide{
+        height: inherit !important;
+    }
+
+    .indledning{
+        text-align: center;
+    }
+
+    ul.products li.product{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

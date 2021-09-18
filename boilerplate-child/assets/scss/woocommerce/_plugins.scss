@@ -1,0 +1,127 @@
+
+/////////////////////////////
+/* 	WooCommerce Gift Cards */
+////////////////////////////
+
+
+
+//Cart
+
+.op-woocommerce .cart-collaterals .cart_totals .shop_table  tr.update_totals_on_change th:after{
+    content: ''!important;
+}
+
+
+
+//Checkout
+.giftcard_toggle{
+    margin-bottom: 10px;
+    .woocommerce-info{
+        background-color: $grey_medium;
+        
+    }
+}
+
+.add_gift_card_form {
+    display: none;
+    background: $grey_light;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+
+    h4{
+        display: none;
+    }
+    #wc_gc_cart_redeem_form{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 15px;
+
+        input[type="text"]{
+        margin-bottom: 0px!important;
+        }
+        button{
+            width: 100%;
+            background: $primary;
+            border-color: $primary;
+            color: #fff;
+            font-size: 1.4rem;
+            text-transform: none;
+            border-style: solid;
+            font-weight: 500;
+
+            &:hover{
+                background:lighten($primary, 35%);
+                border-color: lighten($primary, 35%)
+            }
+        }
+    }
+}
+
+
+//Account page
+body.woocommerce-giftcards{
+    h2{
+        font-size: 18px;
+        margin-top:40px;
+        margin-bottom: 15px;
+        text-transform: none;
+    }
+    h1, h2, h3, h4, h5, h6{
+        text-transform: none;
+        font-weight: 600;
+    }
+
+    .woocommerce-MyAccount-Giftcards-balance-amount{
+        font-size: 4rem;     
+        margin-bottom: 1.5em;
+    }
+
+    .woocommerce-MyAccount-Giftcards-form{
+        input{
+            margin-bottom: 0px;
+            border-color: $grey_light;
+        }
+        button{
+            flex-grow: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    .woocommerce-giftcards-table, .woocommerce-giftcards-activity-table {
+        td{
+            text-align: left; 
+            padding-top:15px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+//single
+.wc_gc_datepicker{
+    padding: 0px;
+
+    .ui-datepicker-header{
+        .ui-datepicker-title{
+            color: $black;
+        }
+    }
+
+    table.ui-datepicker-calendar {
+       thead th span{
+            color:$grey;
+        }
+        td.ui-datepicker-current-day a{
+            color:#fff!important;
+        }
+        td.ui-datepicker-current-day:after{
+            background-color: $grey_medium!important;
+            border-radius: 0px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+

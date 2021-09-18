@@ -1,0 +1,48 @@
+.shop_notice{
+    margin-bottom: 5px;
+
+    .container{
+        position: relative;
+        .shop_notice_wrapper{
+            display: block;
+            background:$green;
+            color:$white;
+            padding: 10px 40px 10px 10px;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+
+            @include md {
+                align-items: center; 
+                text-align: center;
+            }
+
+            &:hover{
+                background-color: lighten($green, 10%);
+            }
+
+            svg{
+                margin-left: 10px;
+            }
+        }
+
+        #shop_notice_close{
+            position: absolute;
+            display: flex;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            align-items: center;
+            color: $white;
+            padding-left: 10px;
+            padding-right: 10px;
+            opacity: 0.5;
+
+            &:hover{
+                opacity: 1;
+            }
+
+          
+        }
+    }
+}

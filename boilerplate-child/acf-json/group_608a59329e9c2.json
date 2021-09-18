@@ -1,0 +1,594 @@
+{
+    "key": "group_608a59329e9c2",
+    "title": "Sektioner",
+    "fields": [
+        {
+            "key": "field_608a593aaf436",
+            "label": "Sektioner",
+            "name": "sektioner",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_608a59460d181": {
+                    "key": "layout_608a59460d181",
+                    "name": "varekategorier",
+                    "label": "Varekategorier",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_608ab5efd8f92",
+                            "label": "Kategorier",
+                            "name": "kategorier",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "layout_608ab7049ed7a": {
+                                    "key": "layout_608ab7049ed7a",
+                                    "name": "kategori_link",
+                                    "label": "Kategori link",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_608a5a3ab4b04",
+                                            "label": "Kategori",
+                                            "name": "kategori",
+                                            "type": "taxonomy",
+                                            "instructions": "Indholdet redigeres  indefra menuen \"Varer\" -> \"Kategorier\".",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "taxonomy": "product_cat",
+                                            "field_type": "select",
+                                            "allow_null": 0,
+                                            "add_term": 0,
+                                            "save_terms": 0,
+                                            "load_terms": 0,
+                                            "return_format": "id",
+                                            "multiple": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "layout_608ab71b35aa6": {
+                                    "key": "layout_608ab71b35aa6",
+                                    "name": "eksterne_link",
+                                    "label": "Eksterne link",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_608ab73535aa7",
+                                            "label": "Billede",
+                                            "name": "billede",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "id",
+                                            "preview_size": "medium",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": ""
+                                        },
+                                        {
+                                            "key": "field_608ab74635aa8",
+                                            "label": "Overskrift",
+                                            "name": "overskrift",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_608ab75d35aaa",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Tilføj link",
+                            "min": 4,
+                            "max": 4
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60923b1197bfd": {
+                    "key": "layout_60923b1197bfd",
+                    "name": "billede_tekst",
+                    "label": "Billede - tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60923b1e97bfe",
+                            "label": "Placering",
+                            "name": "placering",
+                            "type": "select",
+                            "instructions": "Vælg placering af billede og tekst",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "img_text": "Billede - tekst",
+                                "text_img": "Tekst - billede"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_60923c6f97bff",
+                            "label": "Billede",
+                            "name": "billede",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_60923c8397c00",
+                            "label": "Tekst",
+                            "name": "tekst",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6092475a66ee3": {
+                    "key": "layout_6092475a66ee3",
+                    "name": "brands",
+                    "label": "Brands",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6092475e66ee4",
+                            "label": "Brands",
+                            "name": "vis_brands",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "random": "Random brands (Vis op til 12 random brands,  som der har tilkoblet produkter )",
+                                "selected": "Udvalgte brands (Vis op til 12 udvalgte brands)",
+                                "all": "Vis alle brands som har tilkoblet produkter (Bør kun bruges på brandsiden)"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_609247c866ee5",
+                            "label": "Udvalgte brands",
+                            "name": "udvalgte_brands",
+                            "type": "taxonomy",
+                            "instructions": "OBS: Der listes 5 produkter pr. linje.",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6092475e66ee4",
+                                        "operator": "==",
+                                        "value": "selected"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "product_brand",
+                            "field_type": "multi_select",
+                            "allow_null": 0,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "object",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_60a50d7175e66",
+                            "label": "Visning af brands",
+                            "name": "brands_visning",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "slider": "Vis i slider",
+                                "box": "Vis i kasser"
+                            },
+                            "allow_null": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60991c9a2822a": {
+                    "key": "layout_60991c9a2822a",
+                    "name": "fuld_bredde_tekst",
+                    "label": "Fuld bredde tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60991cc32822b",
+                            "label": "Indhold",
+                            "name": "indhold",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60993b145e32b": {
+                    "key": "layout_60993b145e32b",
+                    "name": "tekst_tekst",
+                    "label": "Tekst - tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60993b2e5e32c",
+                            "label": "Indhold venstre",
+                            "name": "indhold_venstre",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "40",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_60993b625e32d",
+                            "label": "Indhold højre",
+                            "name": "indhold_hojre",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "60",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60a6000ff0ddb": {
+                    "key": "layout_60a6000ff0ddb",
+                    "name": "udvalgte_varer",
+                    "label": "Udvalgte varer slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a601eae97a5",
+                            "label": "Vis varer",
+                            "name": "vis_varer",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "newest": "Nyeste produkter",
+                                "selected": "Udvalgte",
+                                "faves": "Favoritter \/ stjernemarkeret"
+                            },
+                            "allow_null": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_60a6006ef0ddd",
+                            "label": "Overskrift",
+                            "name": "overskrift",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60a60018f0ddc",
+                            "label": "Udvalgte varer",
+                            "name": "udvalgte_varer",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_60a601eae97a5",
+                                        "operator": "==",
+                                        "value": "selected"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "id",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_60a6100227c56",
+                            "label": "Vis max",
+                            "name": "vis_max_produkter",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_60a601eae97a5",
+                                        "operator": "!=",
+                                        "value": "selected"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 5,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 5,
+                            "max": 15,
+                            "step": 5
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60b74a14f453b": {
+                    "key": "layout_60b74a14f453b",
+                    "name": "nyheder",
+                    "label": "Nyheder",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b74aaef453e",
+                            "label": "Info",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Vis de produkter som er angivet som nyheder. Produkter defineres som en nyhed, hvis de er oprettet indenfor de sidste x antal dage. Du styre antal dage fra sektionen \"Nyheder\" på siden <a href=\"http:\/\/evans-custom-wp-woocommerce.local\/wp-admin\/admin.php?page=globale-indstillinger\">Gobale indstilinger<\/a>\"",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60b8bd42ef89f": {
+                    "key": "layout_60b8bd42ef89f",
+                    "name": "favoritter",
+                    "label": "Favoritter",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b8bd42ef8a0",
+                            "label": "Info",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Her listes alle de produkter kunne har markeret som favorit.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Tilføj sektion",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_cat"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_brand"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1624009074
+}

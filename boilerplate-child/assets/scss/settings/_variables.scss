@@ -1,0 +1,220 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $global-font;
+  color: $black;
+  font-style: normal;
+  font-size: 1.6rem; 
+  line-height: 24px;
+}
+
+.container{
+  @include global_width;
+}
+
+:focus { outline: none; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-weight: 800;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  line-height: 110%;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  color:$black;
+  @include md{  
+    font-family: $headings-font;
+    overflow-wrap: normal;
+  }
+  
+}
+
+span.h1, span.h2, span.h3, span.h4, span.h5, span.h6{
+  display: inline-block;
+}
+
+h1, .h1 {
+  font-size: 2.4rem;
+  
+  @include md {
+    font-size: 4rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 2.2rem;
+  @include md {
+    font-size: 3rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 2.0rem;
+  @include md {
+    font-size: 2.4rem;
+  }
+}
+
+h4, .h4 {
+  font-size: 1.8rem;
+  @include md {
+    font-size: 2.0rem;
+  }
+}
+
+h5, .h5 {
+  font-size: 1.6rem;
+  @include md {
+    font-size: 1.6rem;
+  }
+}
+
+h6, h6 {
+  font-size: 1.4rem;
+  @include md {
+    font-size: 1.4rem;
+  }
+}
+
+a{
+  text-decoration: none;  
+  color: $primary;
+
+  &:hover {
+    color: lighten($black, 35%);
+  }
+
+}
+
+.button{
+ 
+  display: inline-block;
+  padding: 15px;
+  background:$primary;
+  color:$white;
+  //text-transform: uppercase;
+  font-family: $global-font;
+  font-size: 1.6rem;
+  text-align: center;
+  border-color: $black;
+  border-style: solid;
+
+  &:hover{
+    background: lighten($primary, 15%);
+    border-color: lighten($primary, 15%);
+    color:$white;
+  }
+  
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}
+
+/* shortcodes */
+.firma_navn{
+  font-weight: bold;
+}
+.firma_some{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+  @include md {
+    justify-content: left;
+  }
+
+  a{
+    font-size: 1.8rem;
+  }
+
+}
+
+body.safari .firma_some a{
+  padding-right: 15px;
+}
+
+.privatlivspolitik{
+  text-decoration: underline;
+}
+
+address{ 
+  font-style:normal;
+  color:$black;
+  font-size: 1.4rem;
+}
+
+.content-wrapper{
+  display: grid;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/*formidabe*/
+.frm_style_ny-styling .frm_submit{
+  text-align: right;
+}
+
+input, select, textarea{
+  font-family: $global-font;
+  font-size: 1.6rem;
+  color:$black;
+  margin-bottom: 10px;
+  border:1px solid $grey;
+  padding: 10px; //15px 10px;   
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing: border-box; 
+}
+
+.slick-slider{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  @include md {
+    margin-bottom: 50px;
+  }
+
+  .slick-arrow{
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: $grey;
+    color: $white;
+
+    &.slick-prev{
+      right:50px;
+    }
+    &.slick-next{
+      right: 0px;
+    }
+  }
+
+}

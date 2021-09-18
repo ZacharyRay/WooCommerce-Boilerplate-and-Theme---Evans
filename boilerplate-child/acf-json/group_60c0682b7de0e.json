@@ -1,0 +1,83 @@
+{
+    "key": "group_60c0682b7de0e",
+    "title": "USP",
+    "fields": [
+        {
+            "key": "field_60c06830ffb17",
+            "label": "USP statements",
+            "name": "header_usp",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 4,
+            "layout": "table",
+            "button_label": "Tilføj USP",
+            "sub_fields": [
+                {
+                    "key": "field_60cb42365038c",
+                    "label": "Ikon",
+                    "name": "ikon",
+                    "type": "text",
+                    "instructions": "Find dit ikon på <a href=\"https:\/\/fontawesome.com\/icons\" target=\"_blank\">https:\/\/fontawesome.com\/icons<\/a> og kopir html koden f.eks: &lt;i class=&quot;fal fa-truck&quot;&gt;&lt;\/i&gt;\r\n\r\nOBS: ikonet vises kun på produkt siden og ikke i headeren",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60c0690bffb18",
+                    "label": "USP",
+                    "name": "usp",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "globale-indstillinger"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1623933687
+}
